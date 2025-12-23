@@ -17,12 +17,12 @@ jobs:
         python-version: '3.12'
 
     - name: Install dependencies
-      run: pip install mlflow scikit-learn pandas numpy joblib
+      run: pip install mlflow=2.19.0 scikit-learn pandas numpy joblib
 
     - name: Run MLflow Project
       run: |
         cd MLProject
-        mlflow run .
+        mlflow run . --env-manager=local
 
     - name: Upload model artifacts
       uses: actions/upload-artifact@v4
