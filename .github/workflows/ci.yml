@@ -17,7 +17,7 @@ jobs:
         python-version: '3.12'
 
     - name: Install dependencies
-      run: pip install mlflow=2.19.0 scikit-learn pandas numpy joblib
+      run: pip install mlflow==2.19.0 scikit-learn pandas numpy joblib
 
     - name: Run MLflow Project
       run: |
